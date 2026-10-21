@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bvunjxkbrc01n"]
+
+[ext_resource type="Script" uid="uid://wld7jduv6vjl" path="res://new_script.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://wt7nkkmvcagu" path="res://fences.glb" id="2_epypp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88lfc"]
+albedo_color = Color(0, 0.3949336, 0.046556495, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_88lfc"]
+material = SubResource("StandardMaterial3D_88lfc")
+size = Vector3(14.647461, 1, 14.153107)
+
+[node name="Node3D" type="Node3D" unique_id=1610246299]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=56951804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2172852, 0, -0.8121327)
+mesh = SubResource("BoxMesh_88lfc")
+script = ExtResource("1_0e48y")
+
+[node name="fences" parent="MeshInstance3D" unique_id=588701240 instance=ExtResource("2_epypp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5996165, 0)
+
+[node name="fences2" parent="MeshInstance3D" unique_id=1797657350 instance=ExtResource("2_epypp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6285884, 0.50465155, 4.2510843)

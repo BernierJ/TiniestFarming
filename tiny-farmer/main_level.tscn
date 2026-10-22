@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bvunjxkbrc01n"]
+
+[ext_resource type="Texture2D" uid="uid://bylqgof5m603v" path="res://textures/Grass_01_Nrm.png" id="1_bhu08"]
+[ext_resource type="PackedScene" uid="uid://bc37xsl2xi2ew" path="res://models/fence.tscn" id="1_bw3m6"]
+[ext_resource type="Texture2D" uid="uid://dwy32tfwq1owu" path="res://textures/Grass_01.png" id="2_05as6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88lfc"]
+albedo_texture = ExtResource("2_05as6")
+normal_enabled = true
+normal_texture = ExtResource("1_bhu08")
+uv1_scale = Vector3(6, 6, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_88lfc"]
+lightmap_size_hint = Vector2i(148, 89)
+material = SubResource("StandardMaterial3D_88lfc")
+size = Vector3(14.647461, 1, 14.153107)
+
+[sub_resource type="GDScript" id="GDScript_6614m"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6614m"]
+data = PackedVector3Array(-7.3237, 0.5, 7.0765996, 7.3237, 0.5, 7.0765996, -7.3237, -0.5, 7.0765996, 7.3237, 0.5, 7.0765996, 7.3237, -0.5, 7.0765996, -7.3237, -0.5, 7.0765996, 7.3237, 0.5, -7.0765996, -7.3237, 0.5, -7.0765996, 7.3237, -0.5, -7.0765996, -7.3237, 0.5, -7.0765996, -7.3237, -0.5, -7.0765996, 7.3237, -0.5, -7.0765996, 7.3237, 0.5, 7.0765996, 7.3237, 0.5, -7.0765996, 7.3237, -0.5, 7.0765996, 7.3237, 0.5, -7.0765996, 7.3237, -0.5, -7.0765996, 7.3237, -0.5, 7.0765996, -7.3237, 0.5, -7.0765996, -7.3237, 0.5, 7.0765996, -7.3237, -0.5, -7.0765996, -7.3237, 0.5, 7.0765996, -7.3237, -0.5, 7.0765996, -7.3237, -0.5, -7.0765996, 7.3237, 0.5, 7.0765996, -7.3237, 0.5, 7.0765996, 7.3237, 0.5, -7.0765996, -7.3237, 0.5, 7.0765996, -7.3237, 0.5, -7.0765996, 7.3237, 0.5, -7.0765996, -7.3237, -0.5, 7.0765996, 7.3237, -0.5, 7.0765996, -7.3237, -0.5, -7.0765996, 7.3237, -0.5, 7.0765996, 7.3237, -0.5, -7.0765996, -7.3237, -0.5, -7.0765996)
+
+[node name="Environment" type="Node3D" unique_id=1610246299]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=56951804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2172852, 0, -0.8121327)
+mesh = SubResource("BoxMesh_88lfc")
+script = SubResource("GDScript_6614m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=368825265]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1849588557]
+shape = SubResource("ConcavePolygonShape3D_6614m")
+debug_color = Color(0, 0.6, 0.69803923, 0.59607846)
+debug_fill = false
+
+[node name="FenceCollection" type="Node3D" parent="." unique_id=1541293319]
+
+[node name="WoodenFences" parent="FenceCollection" unique_id=97375947 instance=ExtResource("1_bw3m6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97466564, 0.52159977, 2.7159867)
+
+[node name="WoodenFences2" parent="FenceCollection" unique_id=1131674372 instance=ExtResource("1_bw3m6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1542375, 0.52159977, 2.7159867)
+
+[node name="WoodenFences3" parent="FenceCollection" unique_id=922723028 instance=ExtResource("1_bw3m6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2817903, 0.52159977, 2.7159867)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=860301821]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.008322, 0)

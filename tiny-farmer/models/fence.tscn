@@ -38,10 +38,10 @@ data = PackedVector3Array(-0.69189996, 0.2087, -0.013499999, -0.6095, 0.1978, -0
 
 [node name="fences" unique_id=97375947 instance=ExtResource("1_si0va")]
 
-[node name="Lamp_001" parent="." index="0" unique_id=1525581899]
+[node name="Lamp_001" parent="." index="0" unique_id=1431438725]
 visible = false
 
-[node name="fence_long" parent="." index="1" unique_id=1028027554]
+[node name="fence_long" parent="." index="1" unique_id=2042797553]
 surface_material_override/0 = SubResource("StandardMaterial3D_dqmy7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence_long" index="0" unique_id=1773224944]
@@ -49,13 +49,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_dqmy7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence_long/StaticBody3D" index="0" unique_id=640833427]
 shape = SubResource("ConcavePolygonShape3D_si0va")
 
-[node name="Lamp" parent="." index="2" unique_id=1203654792]
+[node name="Lamp" parent="." index="2" unique_id=1668381629]
 visible = false
 
-[node name="Camera" parent="." index="3" unique_id=1829471440]
+[node name="Camera" parent="." index="3" unique_id=1707997740]
 visible = false
 
-[node name="fence_short" parent="." index="4" unique_id=1677871285]
+[node name="fence_short" parent="." index="4" unique_id=1256374622]
 surface_material_override/0 = SubResource("StandardMaterial3D_uoa32")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence_short" index="0" unique_id=897672302]
@@ -63,7 +63,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_uoa32")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence_short/StaticBody3D" index="0" unique_id=1969317170]
 shape = SubResource("ConcavePolygonShape3D_46bx1")
 
-[node name="fence_long_nophys" parent="." index="5" unique_id=254781518]
+[node name="fence_long_nophys" parent="." index="5" unique_id=1177954750]
 surface_material_override/0 = SubResource("StandardMaterial3D_hyehn")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence_long_nophys" index="0" unique_id=888393655]
@@ -71,7 +71,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_hyehn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence_long_nophys/StaticBody3D" index="0" unique_id=1691576489]
 shape = SubResource("ConcavePolygonShape3D_87m04")
 
-[node name="fence_short_nophys" parent="." index="6" unique_id=1817385585]
+[node name="fence_short_nophys" parent="." index="6" unique_id=448851627]
 surface_material_override/0 = SubResource("StandardMaterial3D_ivngs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="fence_short_nophys" index="0" unique_id=607003490]
